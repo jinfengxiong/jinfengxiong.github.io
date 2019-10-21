@@ -154,19 +154,19 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">linux</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">操作系统</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">缓存</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">redis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">操作系统</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -180,19 +180,19 @@
     <nav id="title-list-nav">
         
         <a  class=""
-           href="/2019/10/21/linux命令（1）：cd/"
-           data-tag="linux,操作系统"
-           data-author="" >
-            <span class="post-title" title="linux命令（1）：cd">linux命令（1）：cd</span>
-            <span class="post-date" title="2019-10-21 11:04:35">2019/10/21</span>
-        </a>
-        
-        <a  class=""
            href="/2019/10/21/redis入门，Linux安装Redis-一/"
            data-tag="缓存,redis"
            data-author="" >
             <span class="post-title" title="redis入门，Linux安装Redis(一)">redis入门，Linux安装Redis(一)</span>
             <span class="post-date" title="2019-10-21 13:45:03">2019/10/21</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/21/linux命令（1）：cd/"
+           data-tag="linux,操作系统"
+           data-author="" >
+            <span class="post-title" title="linux命令（1）：cd">linux命令（1）：cd</span>
+            <span class="post-date" title="2019-10-21 11:04:35">2019/10/21</span>
         </a>
         
         <a  class=""
@@ -351,7 +351,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#linux','#操作系统','#缓存','#redis','#ehcache',],
+            'data': ['#缓存','#redis','#linux','#操作系统','#ehcache',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
