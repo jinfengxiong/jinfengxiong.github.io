@@ -180,19 +180,19 @@
     <nav id="title-list-nav">
         
         <a  class=""
-           href="/2019/10/21/linux命令（1）：cd/"
-           data-tag="linux,操作系统"
-           data-author="" >
-            <span class="post-title" title="linux命令（1）：cd">linux命令（1）：cd</span>
-            <span class="post-date" title="2019-10-21 11:04:35">2019/10/21</span>
-        </a>
-        
-        <a  class=""
            href="/2019/10/05/hello-world/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Hello World">Hello World</span>
             <span class="post-date" title="2019-10-05 16:05:56">2019/10/05</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/21/linux命令（1）：cd/"
+           data-tag="linux,操作系统"
+           data-author="" >
+            <span class="post-title" title="linux命令（1）：cd">linux命令（1）：cd</span>
+            <span class="post-date" title="2019-10-21 11:04:35">2019/10/21</span>
         </a>
         
         <a  class=""
@@ -243,7 +243,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-21 13:59:55'>2019-10-21 13:45</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-21 14:14:15'>2019-10-21 13:45</time>
         
     </div>
     <div class="article-meta">
@@ -293,8 +293,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="window-10-子系统-linux（ubuntu）-安装redis"><a href="#window-10-子系统-linux（ubuntu）-安装redis" class="headerlink" title="window 10 子系统 linux（ubuntu） 安装redis"></a>window 10 子系统 linux（ubuntu） 安装redis</h2><h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
-<li>wget 下载最新的稳定版本redis（奇数版本号为开发版本，偶数版本为稳定版本）<blockquote>
+<li>wget 下载最新的稳定版本redis（奇数版本号为开发版本，偶数版本为稳定版本， 推荐目录/usr/local/src/）<blockquote>
 <p>wget <a href="http://download.redis.io/releases/redis-5.0.6.tar.gz" target="_blank" rel="noopener">http://download.redis.io/releases/redis-5.0.6.tar.gz</a></p>
+</blockquote>
+</li>
+<li>解压下载的安装包<blockquote>
+<p>tar xzf redis-5.0.6.tar.gz</p>
+</blockquote>
+</li>
+<li>进入 redis-5.0.6 目录 make 安装                <blockquote>
+<p>cd redis-5.0.6<br>  make</p>
 </blockquote>
 </li>
 </ol>
@@ -311,7 +319,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="昵称有点怪">昵称有点怪</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-21, 13:45:03</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-21, 13:59:55</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-21, 14:14:15</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/21/redis入门，Linux安装Redis-一/" title="redis入门，Linux安装Redis(一)">http://yoursite.com/2019/10/21/redis入门，Linux安装Redis-一/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
