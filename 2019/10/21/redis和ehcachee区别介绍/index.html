@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>关于 | 昵称有点怪</title>
-  <meta name="keywords" content>
-  <meta name="description" content="关于 | 昵称有点怪">
+  <title>redis和ehcache区别介绍 | 昵称有点怪</title>
+  <meta name="keywords" content=" 缓存 , redis , ehcache ">
+  <meta name="description" content="redis和ehcache区别介绍 | 昵称有点怪">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="**个人简介熊金锋,目前从事 Java 及相关工作。">
 <meta property="og:type" content="website">
@@ -215,19 +215,29 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-redis和ehcachee区别介绍" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于</h1>
+        <h1 class="article-title">redis和ehcache区别介绍</h1>
     
     <div class="article-meta">
         
         
         
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">缓存</a>
+            
+            <a href="javascript:" class="color1">redis</a>
+            
+            <a href="javascript:" class="color3">ehcache</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-09 13:44:30'>2019-10-09 13:44</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-21 12:20:21'>2019-10-21 11:48</time>
         
     </div>
     <div class="article-meta">
@@ -260,7 +270,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Redis"><span class="toc-text">关于Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-特点"><span class="toc-text">Redis 特点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Ehcache"><span class="toc-text">关于Ehcache</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ehcache特点"><span class="toc-text">Ehcache特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis、Ehcache-使用场景"><span class="toc-text">Redis、Ehcache 使用场景</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -276,7 +286,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> **个人简介<br>熊金锋,目前从事 Java 及相关工作。</p>
+        <h1 id="关于Redis"><a href="#关于Redis" class="headerlink" title="关于Redis"></a>关于Redis</h1><p>Redis是一个开源(BSD许可)的内存数据结构存储，用作数据库、缓存和消息代理。它支持诸如字符串、散列、列表、集、带范围查询的排序集、位图、hyperloglog、带半径查询和流的地理空间索引等数据结构。可用于缓存，事件发布或订阅，高速队列等场景。该数据库使用ANSI C语言编写，支持网络，提供字符串，哈希，列表，队列，集合结构直接存取，基于内存，可持久化。</p>
+<h2 id="Redis-特点"><a href="#Redis-特点" class="headerlink" title="Redis 特点"></a>Redis 特点</h2><ol>
+<li><p>支持持久化</p>
+<p>  redis的本地持久化支持两种方式：RDB和AOF。RDB 在redis.conf配置文件里配置持久化触发器，AOF指的是redis没增加一条记录都会保存到持久化文件中（保存的是这条记录的生成命令），如果 不是用redis做DB用的话还会不要开AOF ，数据太庞大了，重启恢复的时候是一个巨大的工程！</p>
+</li>
+<li><p>丰富的数据类型</p>
+<p> redis 支持 String 、Lists、sets、sorted sets、hashes 多种数据类型,新浪微博会使用redis做nosql主要也是它具有这些类型，时间排序、职能排序、我的微博、发给我的这些功能List 和 sorted set的强大操作功能息息相关</p>
+</li>
+<li><p>高性能</p>
+<p> 这点跟memcache很想象，内存操作的级别是毫秒级的比硬盘操作秒级操作自然高效不少，较少了磁头寻道、数据读取、页面交换这些高开销的操作！这也是NOSQL冒出来的原因吧，应该是高性能 是基于RDBMS的衍生产品，虽然RDBMS也具有缓存结构，但是始终在app层面不是我们想要的那么操控的。</p>
+</li>
+</ol>
+<h1 id="关于Ehcache"><a href="#关于Ehcache" class="headerlink" title="关于Ehcache"></a>关于Ehcache</h1><p>Ehcache是一个开源的、基于标准的缓存，它可以提高性能、卸载数据库并简化可伸缩性。它是最广泛使用的基于java的缓存，因为它健壮、可靠、功能全面，并且与其他流行的库和框架集成。Ehcache从进程内缓存扩展到进程内/进程外部署和tb级缓存的混合。</p>
+<h2 id="Ehcache特点"><a href="#Ehcache特点" class="headerlink" title="Ehcache特点"></a>Ehcache特点</h2><ol>
+<li><p>快速，简单</p>
+<p> 在过去众多的测试中已经表明Ehcache是最快的Java缓存之一，Ehcache的线程机制是为大型高并发系统设计的， 而且很多用户都不知道他们正在使用Ehcache, 也可以看出使用Ehcache不需要什么复杂的配置， Ehcache的API也易于使用， 很容易部署上线和运行。</p>
+</li>
+<li><p>多种缓存策略</p>
+<p> 提供LRU、LFU和FIFO缓存策略。Ehcache支持基于Cache和基于 Element 的过期策略，每个Cache 的存活时间都是可以设置和控制的。Ehcache 提供了LRU 、 LFU 和 FIFO 缓存淘汰算法，在 Ehcaehe 1.2 引入了最少使用和先进先出缓存淘汰算 法，构成了完整的缓存淘汰算法。</p>
+</li>
+<li><p>缓存数据有两级</p>
+<p> 内存和磁盘，因此无须担心容量问题。缓存在内存和硬盘存储可 以伸缩到 GB, Ehcache 为大数据存储做过优化。缓存数据会在虚拟机重启的过程中写入磁盘。 Ehcache 是第 个引入缓存数据持久化存储的开源 Java 缓存框架，缓存的数据可以在机器重启后从磁盘上重新获得，可以根据 需要使用 cache.flush 方法将缓存刷到磁盘上面，极大地方便了 Ehcache 的使用。</p>
+</li>
+<li><p>提供 Hibernate 的缓存实现</p>
+<p> Hibernate 默认二级缓存是不启动的，启动二级缓存通过采用 Ehcache 来实现。</p>
+</li>
+</ol>
+<h2 id="Redis、Ehcache-使用场景"><a href="#Redis、Ehcache-使用场景" class="headerlink" title="Redis、Ehcache 使用场景"></a>Redis、Ehcache 使用场景</h2><ol>
+<li>ehcache直接在jvm虚拟机中缓存，速度快，效率高；但是缓存共享麻烦，集群分布式应用不方便。</li>
+<li>redis是通过socket访问到缓存服务，效率比ecache低，比数据库要快很多，处理集群和分布式缓存方便，有成熟的方案。</li>
+<li>如果是单个应用或者对缓存访问要求很高的应用，用ehcache。</li>
+<li>如果是大型系统，存在缓存共享、分布式部署、缓存内容很大的，建议用redis。<blockquote>
+<p>补充下：ehcache也有缓存共享方案，不过是通过RMI或者Jgroup多播方式进行广播缓存通知更新，缓存共享复杂，维护不方便；简单的共享可以，但是涉及到缓存恢复，大数据缓存，则不合适</p>
+</blockquote>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jf_xiong@qq.com </span>
@@ -284,6 +329,18 @@
 </article>
 
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>redis和ehcache区别介绍</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="昵称有点怪">昵称有点怪</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-10-21, 11:48:32</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-21, 12:20:21</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/21/redis和ehcachee区别介绍/" title="redis和ehcache区别介绍">http://yoursite.com/2019/10/21/redis和ehcachee区别介绍/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
