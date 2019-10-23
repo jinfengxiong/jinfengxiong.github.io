@@ -162,14 +162,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">缓存</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">redis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">linux</a>
     </li>
     
@@ -178,7 +170,19 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">缓存</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">redis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">ehcache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">linux， 操作系统</a>
     </li>
     
     <div class="clearfix"></div>
@@ -186,22 +190,6 @@
 
     
     <nav id="title-list-nav">
-        
-        <a  class=""
-           href="/2019/10/05/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-10-05 16:05:56">2019/10/05</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/10/21/redis入门，Linux安装Redis-一/"
-           data-tag="缓存,redis"
-           data-author="" >
-            <span class="post-title" title="redis入门，Linux安装Redis(一)">redis入门，Linux安装Redis(一)</span>
-            <span class="post-date" title="2019-10-21 13:45:03">2019/10/21</span>
-        </a>
         
         <a  class=""
            href="/2019/10/21/linux命令（1）：cd/"
@@ -212,6 +200,14 @@
         </a>
         
         <a  class=""
+           href="/2019/10/05/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-10-05 16:05:56">2019/10/05</span>
+        </a>
+        
+        <a  class=""
            href="/2019/10/21/redis和ehcachee区别介绍/"
            data-tag="缓存,redis,ehcache"
            data-author="" >
@@ -219,11 +215,19 @@
             <span class="post-date" title="2019-10-21 11:48:32">2019/10/21</span>
         </a>
         
+        <a  class=""
+           href="/2019/10/21/redis入门，Linux安装Redis-一/"
+           data-tag="缓存,redis"
+           data-author="" >
+            <span class="post-title" title="redis入门，Linux安装Redis(一)">redis入门，Linux安装Redis(一)</span>
+            <span class="post-date" title="2019-10-21 13:45:03">2019/10/21</span>
+        </a>
+        
         <a  class="操作系统 "
            href="/2019/10/23/linux-command-ls/"
-           data-tag="linux"
+           data-tag="linux， 操作系统"
            data-author="" >
-            <span class="post-title" title="linux-command-ls">linux-command-ls</span>
+            <span class="post-title" title="linux命令（1）：ls">linux命令（1）：ls</span>
             <span class="post-date" title="2019-10-23 09:53:10">2019/10/23</span>
         </a>
         
@@ -327,7 +331,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#缓存','#redis','#linux','#操作系统','#ehcache',],
+            'data': ['#linux','#操作系统','#缓存','#redis','#ehcache','#linux， 操作系统',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

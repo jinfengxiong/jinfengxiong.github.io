@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>linux-command-ls | 昵称有点怪</title>
-  <meta name="keywords" content=" linux ">
-  <meta name="description" content="linux-command-ls | 昵称有点怪">
+  <title>linux命令（1）：ls | 昵称有点怪</title>
+  <meta name="keywords" content=" linux， 操作系统 ">
+  <meta name="description" content="linux命令（1）：ls | 昵称有点怪">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="**个人简介熊金锋,目前从事 Java 及相关工作。">
 <meta property="og:type" content="website">
@@ -162,14 +162,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">缓存</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">redis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">linux</a>
     </li>
     
@@ -178,7 +170,19 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">缓存</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">redis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">ehcache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">linux， 操作系统</a>
     </li>
     
     <div class="clearfix"></div>
@@ -186,22 +190,6 @@
 
     
     <nav id="title-list-nav">
-        
-        <a  class=""
-           href="/2019/10/05/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-10-05 16:05:56">2019/10/05</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/10/21/redis入门，Linux安装Redis-一/"
-           data-tag="缓存,redis"
-           data-author="" >
-            <span class="post-title" title="redis入门，Linux安装Redis(一)">redis入门，Linux安装Redis(一)</span>
-            <span class="post-date" title="2019-10-21 13:45:03">2019/10/21</span>
-        </a>
         
         <a  class=""
            href="/2019/10/21/linux命令（1）：cd/"
@@ -212,6 +200,14 @@
         </a>
         
         <a  class=""
+           href="/2019/10/05/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-10-05 16:05:56">2019/10/05</span>
+        </a>
+        
+        <a  class=""
            href="/2019/10/21/redis和ehcachee区别介绍/"
            data-tag="缓存,redis,ehcache"
            data-author="" >
@@ -219,11 +215,19 @@
             <span class="post-date" title="2019-10-21 11:48:32">2019/10/21</span>
         </a>
         
+        <a  class=""
+           href="/2019/10/21/redis入门，Linux安装Redis-一/"
+           data-tag="缓存,redis"
+           data-author="" >
+            <span class="post-title" title="redis入门，Linux安装Redis(一)">redis入门，Linux安装Redis(一)</span>
+            <span class="post-date" title="2019-10-21 13:45:03">2019/10/21</span>
+        </a>
+        
         <a  class="操作系统 "
            href="/2019/10/23/linux-command-ls/"
-           data-tag="linux"
+           data-tag="linux， 操作系统"
            data-author="" >
-            <span class="post-title" title="linux-command-ls">linux-command-ls</span>
+            <span class="post-title" title="linux命令（1）：ls">linux命令（1）：ls</span>
             <span class="post-date" title="2019-10-23 09:53:10">2019/10/23</span>
         </a>
         
@@ -241,7 +245,7 @@
     <div class="pjax">
         <article id="post-linux-command-ls" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">linux-command-ls</h1>
+        <h1 class="article-title">linux命令（1）：ls</h1>
     
     <div class="article-meta">
         
@@ -256,14 +260,14 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color1">linux</a>
+            <a href="javascript:" class="color2">linux， 操作系统</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-23 10:23:08'>2019-10-23 09:53</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-23 10:34:59'>2019-10-23 09:53</time>
         
     </div>
     <div class="article-meta">
@@ -296,7 +300,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ls命令-查看目录信息"><span class="toc-text">ls命令,查看目录信息</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -312,7 +316,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="ls命令-查看目录信息"><a href="#ls命令-查看目录信息" class="headerlink" title="ls命令,查看目录信息"></a>ls命令,查看目录信息</h1><ol>
+<li>查看当前目录下的所有目录和文件<blockquote>
+<p>ls</p>
+</blockquote>
+</li>
+<li>查看当前目录下的所有目录和文件（包括隐藏的文件）<blockquote>
+<p>ls -a</p>
+</blockquote>
+</li>
+<li>列表查看当前目录下的所有目录和文件（列表查看，显示更多信息）<blockquote>
+<p>ls -l 或 ll</p>
+</blockquote>
+</li>
+<li>查看指定目录下的所有目录和文件   如：ls /usr<blockquote>
+<p>ls /dir</p>
+</blockquote>
+</li>
+</ol>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jf_xiong@qq.com </span>
     </div>
@@ -321,12 +343,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>linux-command-ls</p>
+    <p><span class="copy-title">文章标题:</span>linux命令（1）：ls</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="昵称有点怪">昵称有点怪</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-23, 09:53:10</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-23, 10:23:08</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/23/linux-command-ls/" title="linux-command-ls">https://jinfengxiong.github.io/2019/10/23/linux-command-ls/</a>
+    <p><span class="copy-title">最后更新:</span>2019-10-23, 10:34:59</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/23/linux-command-ls/" title="linux命令（1）：ls">https://jinfengxiong.github.io/2019/10/23/linux-command-ls/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -390,7 +412,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#缓存','#redis','#linux','#操作系统','#ehcache',],
+            'data': ['#linux','#操作系统','#缓存','#redis','#ehcache','#linux， 操作系统',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
